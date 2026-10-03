@@ -105,4 +105,3 @@ Add a log before and after the next middleware call. Request an endpoint and not
 
 - [ASP.NET Core middleware](https://learn.microsoft.com/aspnet/core/fundamentals/middleware?view=aspnetcore-10.0)
 - [Write custom ASP.NET Core middleware](https://learn.microsoft.com/aspnet/core/fundamentals/middleware/write?view=aspnetcore-10.0)
-

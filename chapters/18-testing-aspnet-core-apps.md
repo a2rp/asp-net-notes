@@ -81,4 +81,3 @@ Add a test for the reading-list collection and a test for a missing item. Add a 
 - [Integration tests in ASP.NET Core](https://learn.microsoft.com/aspnet/core/test/integration-tests?view=aspnetcore-10.0)
 - [Unit testing in .NET](https://learn.microsoft.com/dotnet/core/testing/unit-testing-with-dotnet-test)
 - [Testing EF Core applications](https://learn.microsoft.com/ef/core/testing/)
-

@@ -87,4 +87,3 @@ Make one endpoint return a deliberate validation problem and another throw an ex
 - [Problem Details in ASP.NET Core](https://learn.microsoft.com/aspnet/core/fundamentals/error-handling-api?view=aspnetcore-10.0)
 - [Logging overview](https://learn.microsoft.com/dotnet/core/extensions/logging)
 - [Distributed tracing in .NET](https://learn.microsoft.com/dotnet/core/diagnostics/distributed-tracing)
-

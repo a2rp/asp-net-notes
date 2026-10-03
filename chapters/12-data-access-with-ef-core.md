@@ -126,4 +126,3 @@ Create a local SQLite database, add a migration, save two reading items, and que
 - [Entity Framework Core documentation](https://learn.microsoft.com/ef/core/)
 - [DbContext configuration in ASP.NET Core](https://learn.microsoft.com/ef/core/dbcontext-configuration/)
 - [Migrations overview](https://learn.microsoft.com/ef/core/managing-schemas/migrations/)
-

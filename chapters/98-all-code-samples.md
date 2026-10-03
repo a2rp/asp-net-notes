@@ -582,6 +582,12 @@ builder.Services.AddDbContext<ReadingDbContext>(options =>
 ### Sample 3
 
 ```csharp
+public sealed record ReadingItemResponse(int Id, string Title, bool IsRead);
+```
+
+### Sample 4
+
+```csharp
 app.MapGet("/api/reading-items", async (
     ReadingDbContext db,
     CancellationToken cancellationToken) =>
@@ -599,7 +605,7 @@ app.MapGet("/api/reading-items", async (
 });
 ```
 
-### Sample 4
+### Sample 5
 
 ```csharp
 app.MapPost("/api/reading-items", async (
@@ -622,7 +628,7 @@ app.MapPost("/api/reading-items", async (
 });
 ```
 
-### Sample 5
+### Sample 6
 
 ```bash
 dotnet tool install --global dotnet-ef
@@ -712,17 +718,19 @@ app.UseStatusCodePages();
 ### Sample 2
 
 ```csharp
-app.MapGet("/api/reading-items/{id:int}", (int id) =>
+app.MapGet("/api/reading-items/{id:int}", (int id) => GetReadingItem(id));
+
+static IResult GetReadingItem(int id)
 {
     if (id < 1)
     {
-        return TypedResults.Problem(
+        return Results.Problem(
             title: "Invalid reading item identifier",
             statusCode: StatusCodes.Status400BadRequest);
     }
 
-    return TypedResults.Ok(new { Id = id, Title = "HTTP fundamentals" });
-});
+    return Results.Ok(new { Id = id, Title = "HTTP fundamentals" });
+}
 ```
 
 ## 16. Static files, uploads, and downloads
@@ -835,7 +843,7 @@ message ReadingItemReply {
 ### Sample 1
 
 ```csharp
-public partial class Program;
+public partial class Program { }
 ```
 
 ### Sample 2
