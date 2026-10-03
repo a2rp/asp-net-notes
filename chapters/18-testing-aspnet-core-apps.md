@@ -16,7 +16,7 @@ Use integration tests for behavior that depends on the HTTP pipeline. Avoid dupl
 Add the Microsoft.AspNetCore.Mvc.Testing package to the test project. For top-level Program.cs, expose the generated Program type to the test assembly:
 
 ```csharp
-public partial class Program;
+public partial class Program { }
 ```
 
 A test can use WebApplicationFactory to make an in-process client:
@@ -81,3 +81,4 @@ Add a test for the reading-list collection and a test for a missing item. Add a 
 - [Integration tests in ASP.NET Core](https://learn.microsoft.com/aspnet/core/test/integration-tests?view=aspnetcore-10.0)
 - [Unit testing in .NET](https://learn.microsoft.com/dotnet/core/testing/unit-testing-with-dotnet-test)
 - [Testing EF Core applications](https://learn.microsoft.com/ef/core/testing/)
+

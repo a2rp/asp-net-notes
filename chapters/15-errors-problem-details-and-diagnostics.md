@@ -36,17 +36,19 @@ Problem Details is a standard JSON shape for describing an HTTP error. It can in
 An endpoint can return a deliberate problem response:
 
 ```csharp
-app.MapGet("/api/reading-items/{id:int}", (int id) =>
+app.MapGet("/api/reading-items/{id:int}", (int id) => GetReadingItem(id));
+
+static IResult GetReadingItem(int id)
 {
     if (id < 1)
     {
-        return TypedResults.Problem(
+        return Results.Problem(
             title: "Invalid reading item identifier",
             statusCode: StatusCodes.Status400BadRequest);
     }
 
-    return TypedResults.Ok(new { Id = id, Title = "HTTP fundamentals" });
-});
+    return Results.Ok(new { Id = id, Title = "HTTP fundamentals" });
+}
 ```
 
 For an API, use consistent status codes and stable error fields so clients can react without parsing human prose. Validation errors should identify fields and explain how a request can be corrected.
@@ -85,3 +87,4 @@ Make one endpoint return a deliberate validation problem and another throw an ex
 - [Problem Details in ASP.NET Core](https://learn.microsoft.com/aspnet/core/fundamentals/error-handling-api?view=aspnetcore-10.0)
 - [Logging overview](https://learn.microsoft.com/dotnet/core/extensions/logging)
 - [Distributed tracing in .NET](https://learn.microsoft.com/dotnet/core/diagnostics/distributed-tracing)
+

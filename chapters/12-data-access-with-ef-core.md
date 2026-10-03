@@ -38,6 +38,12 @@ builder.Services.AddDbContext<ReadingDbContext>(options =>
 
 Add the namespace for the selected provider. Keep credentials and production connection strings in protected configuration.
 
+The response type used in the projections can be a small record:
+
+```csharp
+public sealed record ReadingItemResponse(int Id, string Title, bool IsRead);
+```
+
 ## Query asynchronously
 
 A read-only query does not need change tracking:
@@ -120,3 +126,4 @@ Create a local SQLite database, add a migration, save two reading items, and que
 - [Entity Framework Core documentation](https://learn.microsoft.com/ef/core/)
 - [DbContext configuration in ASP.NET Core](https://learn.microsoft.com/ef/core/dbcontext-configuration/)
 - [Migrations overview](https://learn.microsoft.com/ef/core/managing-schemas/migrations/)
+

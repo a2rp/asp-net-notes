@@ -61,7 +61,7 @@ This sample logs a request after the endpoint has completed. ASP.NET Core alread
 
 ## Order changes behavior
 
-A common minimal hosting pipeline is:
+Register AddProblemDetails before Build when using the no-argument exception handler. A common minimal hosting pipeline is:
 
 ```csharp
 app.UseExceptionHandler();
@@ -105,3 +105,4 @@ Add a log before and after the next middleware call. Request an endpoint and not
 
 - [ASP.NET Core middleware](https://learn.microsoft.com/aspnet/core/fundamentals/middleware?view=aspnetcore-10.0)
 - [Write custom ASP.NET Core middleware](https://learn.microsoft.com/aspnet/core/fundamentals/middleware/write?view=aspnetcore-10.0)
+
